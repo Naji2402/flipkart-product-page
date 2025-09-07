@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: italic;
+    src: url(fonts/Inter-Italic.woff2);
+}
+@font-face {
+    font-family: regular;
+    src: url(fonts/Inter-Regular.woff2);
+}
+@font-face {
+    font-family: semibold;
+    src: url(fonts/Inter-SemiBold.woff2);
+}
+@font-face {
+    font-family: semibold-italic;
+    src: url(fonts/Inter-SemiBoldItalic.woff2);
+}
+
+:root{
+    --italic: italic;
+    --regular: regular;
+    --semibold: semibold;
+    --semibold-italic: semibold-italic;
+
+}
+
+.header{
+    height: 56px;
+    background-color: #2874f0;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.hl{
+    min-width: 124px;
+    height: 100%;
+}
+.header-main-content{
+    max-width: 1248px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.flipkart-logo{
+    min-width: 137px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+.flipkart-logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-family: var(--italic);
+}
+.flipkart-logo span{
+    color: #ffe500;
+    font-size: 11px;
+    font-family: var(--italic);
+    font-weight: 500;
+}
+.flip-logo{
+    width: 75px;
+}
+.flip-plus-logo{
+    width: 10px;
+}
+
+.flipkart-search-bar {
+   width: 540px;
+   min-width: 304px;
+}
+.flipkart-search-bar-main{
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0  0 0 12px;
+}
+.search-bar{
+    max-width: 525px;
+    width: 100%;
+    height: 36px;
+    padding: 0 16px;
+    font-family: var(--regular);
+    border-radius: 2px;
+    border: none;
+}
+.search-button{
+    border: 1px solid white;
+    background-color: white;
+    height: 34px;
+    width: 44px;
+    padding: 4px 12px 0px 8px;
+    border-radius: 2px;
+    position: absolute;
+    right: 3px;
+}
+.login-button{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-width: 112px;
+    margin: 0 20px 0 17px;
+}
+.login-btn{
+    padding: 5px 40px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    color: #2874f0;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: var(--semibold);
+
+}
+.header-seller-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    max-width: 150px;
+}
+.header-seller-section span{
+    font-size: 16px;
+    font-family: var(--semibold);
+    font-weight: 500;
+    color: #fff;
+    text-wrap: nowrap;
+    line-height: 20px;
+    letter-spacing: .1px;
+}
+.header-more-section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+    margin: 0 30px 0 11px;
+}
+.header-more-section div{
+    display: flex;
+    gap: 7px;
+}
+.header-more-section div div:nth-child(1){
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    font-family: var(--semibold);
+}
+.header-more-section div img{
+    transform: rotate(270deg);
+    margin-top: 4px;
+}
+
+.header-cart-section{
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+}
+
+.header-cart-main-section{
+    display: flex;
+    gap: 8px;
+}
+.header-cart-main-section img{
+    width: 16px;
+}
+.header-cart-main-section span{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    font-family: var(--semibold);
+}
+
+.second-header{
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .16);
+}
+.second-header-main{
+    width: 1248px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.second-header-main span{
+    font-family: var(--semibold);
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 1.4px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+.second-header-main a{
+    font-size: 13px;
+    text-decoration: none;
+    font-family: var(--semibold);
+    font-weight: 500;
+    color: #000000;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-header-main img{
+    transform: rotate(270deg);
+    width: 4.7px;
+    height: 8px;
+    margin-left: 8px;
+    margin-top: 2px;
+}
