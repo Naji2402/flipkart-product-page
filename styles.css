@@ -294,28 +294,43 @@ body{
 .brand-section{
     padding: 16px;
     border-bottom: 1px solid #f0f0f0;
-
+}
+.brand-section:hover{
+    cursor: pointer;
 }
 
-.brand-section div:nth-child(1){
+.filter-options{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 0 16px 0;
+    padding: 4px 0;
 }
-.brand-section div:nth-child(1) span{
+.filter-options span{
     font-size: 13px;
     font-family: var(--semibold);
 }
-.brand-section div:nth-child(1) img{
+.filter-options img{
     width: 10px;
     height: 10px;
+    transform: rotate(-90deg);
+}
+.filter-options img.rotate{
     transform: rotate(-270deg);
 }
-.brand-section div:nth-of-type(2){
+.brands{
+    /* align-items: center; */
+    padding-bottom: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+.brands.open{
+    display: flex;
+}
+.brands div{
     display: flex;
     align-items: center;
-    padding-bottom: 16px;
 }
 .brand-check {
     width: 14px;
@@ -325,75 +340,13 @@ body{
     border-radius: 1.5px;
     margin-top: 2px;
 }
-.brand-section div:nth-of-type(2) label{
+.brands label{
     font-size: 13px;
     font-family: var(--regular);
     color: #212121;
     margin-left: 11px;
 }
 
-
-
-.ram-section{
-    padding: 16px;
-    border-bottom: 1px solid #f0f0f0;
-
-}
-
-.ram-section div:nth-child(1){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0 16px 0;
-}
-.ram-section div:nth-child(1) span{
-    font-size: 13px;
-    font-family: var(--semibold);
-}
-.ram-section div:nth-child(1) img{
-    width: 10px;
-    height: 10px;
-    transform: rotate(-270deg);
-}
-.ram-section div:nth-of-type(2){
-    display: flex;
-    align-items: center;
-    padding-bottom: 16px;
-}
-.ram-check {
-    width: 14px;
-    height: 14px;
-    border: 1.4px solid #c2c2c2;
-    background:transparent;
-    border-radius: 1.5px;
-    margin-top: 2px;
-}
-.ram-section div:nth-of-type(2) label{
-    font-size: 13px;
-    font-family: var(--regular);
-    color: #212121;
-    margin-left: 11px;
-}
-
-.other-features{
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #f0f0f0;
-    
-}
-.other-features div:nth-child(1){
-    font-size: 13px;
-    font-weight: 500;
-    color: #212121;
-    font-family: var(--semibold);
-}
-.other-features img{
-    width: 6px;
-    height: 11px;
-    transform: rotate(270deg);
-}
 .price-bar-section{
     padding: 16px;
     border-bottom: 1px solid #f0f0f0;
@@ -657,3 +610,5 @@ body{
     font-family: var(--regular);
     margin-top: 8px;
 }
+
+                           

@@ -1,4 +1,8 @@
 let productSection = document.querySelector('#productSection');
+let brandFilter = document.querySelectorAll('.filter-options');
+// let brands = document.querySelector('.brands');
+
+// let arrowRotate = document.querySelector('#hamburger-arrow');
 
 
 const productCart = [
@@ -40,10 +44,170 @@ const productCart = [
             "Tensor G5 Processor",
             "1 year Domestic warranty "
         ] 
+    },
+    {
+        brandName: "Apple",
+        name: "Apple iPhone 16 Pro(Desert Titanium, 128 Gb)",
+        image: "./images/iphone16pro.webp",
+        finalRating: 4.7,
+        ratings: 11483,
+        reviews: 573,
+        price: 129900,
+        realPrice:134900, 
+        discountPercentage: 3,
+        exchangeOfferPrice: 48650,
+        features: [
+            "256 GB ROM",
+            "17.53 cm (6.9 inch) Super Retina XDR Display",
+            "48MP + 48 + 12MP | 12MP Front Camera",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories"
+        ] 
+    },
+    {
+        brandName: "Apple",
+        name: "Apple iPhone 14 (Starlight, 128 Gb)",
+        image: "./images/iphone14.webp",
+        finalRating: 4.6,
+        ratings: 314219,
+        reviews: 11802,
+        price: 52900,
+        realPrice:54900, 
+        discountPercentage: 3,
+        exchangeOfferPrice: 39650,
+        features: [
+            "128 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "12MP + 12MP | 12MP Front Camera",
+            "A15 Bionic Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories"
+        ] 
+    },
+    {
+        brandName: "Nothing",
+        name: "Nothing Phone (3a) Pro (Grey, 128 Gb)",
+        image: "./images/nothing3a.webp",
+        finalRating: 4.5,
+        ratings: 9422,
+        reviews: 739,
+        price: 27999,
+        realPrice:32999, 
+        discountPercentage: 15,
+        exchangeOfferPrice: 22000,
+        features: [
+            "8 GB RAM | 128 GB ROM",
+            "43.66 cm (17.19 cm) Full HD+ Display",
+            "50MP (Main) + 50MP (3X Periscope) + 8MP (Ultra-Wide) | 50MP Front Camera",
+            "5000 mAh Battery",
+            "7s Gen3 Processor",
+            "1 year Manufacturing Warranty"
+        ] 
+    },
+    {
+        brandName: "Apple",
+        name: "Apple iPhone 16 (Black, 128 Gb)",
+        image: "./images/iphone1.webp",
+        finalRating: 4.6,
+        ratings: 136634,
+        reviews: 4114,
+        price: 104900,
+        realPrice:109900, 
+        discountPercentage: 5,
+        exchangeOfferPrice: 48650,
+        features: [
+            "128 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "48MP + 12MP | 12MP Front Camera",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories"
+        ] 
+    },
+    {
+        brandName: "Google",
+        name: "Google Pixel 10 Pro XL (Obsidian, 256)",
+        image: "./images/pixel 10 pro xl.webp",
+        finalRating: 4.8,
+        ratings: 70,
+        reviews: 8,
+        price: 200000,
+        realPrice: 210000,
+        discountPercentage:4,
+        exchangeOfferPrice: 48650,
+        features: [
+            "16 GB RAM",
+            "17.27 cm (6.8 inch) Quad HD+ Display",
+            "48MP + 48MP + 48MP | 42MP Front Camera",
+            "5200 mAh Battery",
+            "Tensor G5 Processor",
+            "1 year Domestic warranty "
+        ] 
+    },
+    {
+        brandName: "Apple",
+        name: "Apple iPhone 16 Pro(Desert Titanium, 128 Gb)",
+        image: "./images/iphone16pro.webp",
+        finalRating: 4.7,
+        ratings: 11483,
+        reviews: 573,
+        price: 129900,
+        realPrice:134900, 
+        discountPercentage: 3,
+        exchangeOfferPrice: 48650,
+        features: [
+            "256 GB ROM",
+            "17.53 cm (6.9 inch) Super Retina XDR Display",
+            "48MP + 48 + 12MP | 12MP Front Camera",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories"
+        ] 
+    },
+    {
+        brandName: "Nothing",
+        name: "Nothing Phone (3a) Pro (Grey, 128 Gb)",
+        image: "./images/nothing3a.webp",
+        finalRating: 4.5,
+        ratings: 9422,
+        reviews: 739,
+        price: 27999,
+        realPrice:32999, 
+        discountPercentage: 15,
+        exchangeOfferPrice: 22000,
+        features: [
+            "8 GB RAM | 128 GB ROM",
+            "43.66 cm (17.19 cm) Full HD+ Display",
+            "50MP (Main) + 50MP (3X Periscope) + 8MP (Ultra-Wide) | 50MP Front Camera",
+            "5000 mAh Battery",
+            "7s Gen3 Processor",
+            "1 year Manufacturing Warranty"
+        ] 
+    },
+    {
+        brandName: "Apple",
+        name: "Apple iPhone 14 (Starlight, 128 Gb)",
+        image: "./images/iphone14.webp",
+        finalRating: 4.6,
+        ratings: 314219,
+        reviews: 11802,
+        price: 52900,
+        realPrice:54900, 
+        discountPercentage: 3,
+        exchangeOfferPrice: 39650,
+        features: [
+            "128 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "12MP + 12MP | 12MP Front Camera",
+            "A15 Bionic Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories"
+        ] 
     }
 ]
 
 productCart.forEach((product) => {
+
+    const getFeatures = product.features.map((feature) => {
+        return `<li>${feature}</li>`;
+    }).join('');
+
     productSection.innerHTML += `<div class="product">
                         <div class="product-details-section">
                             <div class="product-image">
@@ -71,11 +235,7 @@ productCart.forEach((product) => {
                                 </div>
                                 <div class="product-features">
                                     <ul>
-                                        <li>128 GB ROM</li>
-                                        <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
-                                        <li>48MP + 12MP | 12MP Front Camera</li>
-                                        <li>A18 Chip, 6 Core Processor Processor</li>
-                                        <li>1 year warrant for phone and 1 year warranty for in Box Accessories.</li>
+                                            ${getFeatures}
                                     </ul>
                                 </div>
                             </div>
@@ -99,3 +259,16 @@ productCart.forEach((product) => {
                     </div>`
 });
 
+const brandSection = document.querySelectorAll('.brand-section');
+
+                   
+brandSection.forEach((section) => {
+   let filterOption = section.querySelector('.filter-options');
+   let brands = section.querySelector('.brands');
+   let arrowRotate = section.querySelector('#hamburger-arrow');
+
+   filterOption.addEventListener('click', () => {
+    brands.classList.toggle('open');
+    arrowRotate.classList.toggle('rotate')
+   });
+});
