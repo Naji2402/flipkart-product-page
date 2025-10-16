@@ -332,7 +332,7 @@ body{
     display: flex;
     align-items: center;
 }
-.brand-check {
+.check-box {
     width: 14px;
     height: 14px;
     border: 1.4px solid #c2c2c2;

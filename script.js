@@ -215,7 +215,105 @@ const productCart = [
             "A18 Chip, 6 Core Processor Processor",
             "1 year warranty for phone and 1 year warranty for in Box Accessories"
         ] 
-    }
+    },
+    {
+        brandName: "Vivo",
+        name: "Vivo T4 Pro 5G (Nitro Blue, 256 GB)",
+        image:"./images/vivo t4 pro blue.webp",
+        finalRating: 4.5,
+        ratings:6186,
+        reviews:396,
+        price:29999,
+        realPrice:34999,
+        discountPercentage:14,
+        exchangeOfferPrice:23100,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "17.2 cm (6.77 inch) Display",
+            "50MP + 2MP + 50MP | 32MP Front Camera",
+            "6500 mAh Battery",
+            "7 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month Manufacturer Warranty for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Vivo",
+        name: "Vivo T4 Pro 5G (Nitro Blue, 256 GB)",
+        image:"./images/vivo t4 pro gold.webp",
+        finalRating: 4.5,
+        ratings:6186,
+        reviews:396,
+        price:29999,
+        realPrice:34999,
+        discountPercentage:14,
+        exchangeOfferPrice:23100,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "17.2 cm (6.77 inch) Display",
+            "50MP + 2MP + 50MP | 32MP Front Camera",
+            "6500 mAh Battery",
+            "7 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month Manufacturer Warranty for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy S24 5G Snapdragon (Onyx Black, 256 GB)",
+        image:"./images/SamsungGalaxys245gBlack.webp",
+        finalRating: 4.6,
+        ratings:37852,
+        reviews:2030,
+        price:44999,
+        realPrice:79999,
+        discountPercentage:43,
+        exchangeOfferPrice:32350,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "15.75 cm (6.2 inch) Full HD+ Display",
+            "50MP + 12MP | 12MP Front Camera",
+            "4000 mAh Battery",
+            "8 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy S24 5G Snapdragon (Onyx Black, 256 GB)",
+        image:"./images/SamsungGalaxys245gYellow..webp",
+        finalRating: 4.6,
+        ratings:37852,
+        reviews:2030,
+        price:44999,
+        realPrice:79999,
+        discountPercentage:43,
+        exchangeOfferPrice:32350,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "15.75 cm (6.2 inch) Full HD+ Display",
+            "50MP + 12MP | 12MP Front Camera",
+            "4000 mAh Battery",
+            "8 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy Z Fold7 5G (Silver Shadow, 256 GB)",
+        image:"./images/SamsungGalaxyzFold75g.webp",
+        finalRating: 4.7,
+        ratings:110,
+        reviews:2,
+        price:174999,
+        exchangeOfferPrice:48650,
+        features: [
+            "12 BG RAM | 256 GB ROM",
+            "20.32 cm (8 inch) QXGA+ Display",
+            "200MP + 12MP + 10MP | 10MP Front Camera",
+            "4400 mAh Battery",
+            "Snapdragon 8 Elite for Galaxy",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    },
 ]
 
 
@@ -292,16 +390,23 @@ brandSection.forEach((section) => {
 });
 
 
-
-
 let checkbox = document.querySelectorAll('.brand-check');
 
 checkbox.forEach((check) => {
+    check.addEventListener('change', () => {
+        if (check.checked) {
+            checkbox.forEach((otherBox) => {
+                if (otherBox != check) {
+                    otherBox.checked = false;
+                }
+            });
+        }
+    });
     check.addEventListener('click', () => {
-    productSection.innerHTML = '';
     let filterdArray = productCart.filter((card) => {
         if (check.checked && check.value === card.brandName) {
-           return card;
+            productSection.innerHTML = '';
+            return card;
         }
     })
     filterdArray.forEach((newCard) => {
@@ -358,16 +463,8 @@ checkbox.forEach((check) => {
                             </div>
                         </div>
                     </div>`
-    });   
+    }); 
 });
 });
-
-
-
-
-
-
-
-
 
 
