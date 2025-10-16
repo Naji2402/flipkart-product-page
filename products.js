@@ -300,6 +300,7 @@ const productCart = [
         ratings:110,
         reviews:2,
         price:174999,
+        realPrice:79999,
         exchangeOfferPrice:48650,
         features: [
             "12 BG RAM | 256 GB ROM",
@@ -310,6 +311,65 @@ const productCart = [
             "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
         ]
     },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy S24 5G Snapdragon (Onyx Black, 256 GB)",
+        image:"./images/SamsungGalaxys245gBlack.webp",
+        finalRating: 4.6,
+        ratings:37852,
+        reviews:2030,
+        price:44999,
+        realPrice:79999,
+        discountPercentage:43,
+        exchangeOfferPrice:32350,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "15.75 cm (6.2 inch) Full HD+ Display",
+            "50MP + 12MP | 12MP Front Camera",
+            "4000 mAh Battery",
+            "8 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy S24 5G Snapdragon (Onyx Black, 256 GB)",
+        image:"./images/SamsungGalaxys245gYellow..webp",
+        finalRating: 4.6,
+        ratings:37852,
+        reviews:2030,
+        price:44999,
+        realPrice:79999,
+        discountPercentage:43,
+        exchangeOfferPrice:32350,
+        features: [
+            "8 BG RAM | 256 GB ROM",
+            "15.75 cm (6.2 inch) Full HD+ Display",
+            "50MP + 12MP | 12MP Front Camera",
+            "4000 mAh Battery",
+            "8 Gen 4 Processor",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    },
+    {
+        brandName: "Samsung",
+        name: "Samsung Galaxy Z Fold7 5G (Silver Shadow, 256 GB)",
+        image:"./images/SamsungGalaxyzFold75g.webp",
+        finalRating: 4.7,
+        ratings:110,
+        reviews:2,
+        price:174999,
+        realPrice:79999,
+        exchangeOfferPrice:48650,
+        features: [
+            "12 BG RAM | 256 GB ROM",
+            "20.32 cm (8 inch) QXGA+ Display",
+            "200MP + 12MP + 10MP | 10MP Front Camera",
+            "4400 mAh Battery",
+            "Snapdragon 8 Elite for Galaxy",
+            "1 Year Manufacturer Warranty for Device and 6 Month for inbox Accessories"
+        ]
+    }
 ]
 
 export default productCart;

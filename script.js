@@ -44,18 +44,18 @@ productCart.forEach((product) => {
                         </div>
                         <div class="product-price-section">
                             <div class="product-price">
-                                <span>₹${product.price}</span>
+                                <span>₹${product.price.toLocaleString()}</span>
                                 <img src="logos/assured.png" alt="">
                             </div>
                             <div class="product-discount">
-                                <span>₹${product.realPrice}</span>
+                                <span>₹${product.realPrice.toLocaleString()}</span>
                                 <span>${product.discountPercentage}% off</span>
                             </div>
                             <div class="products-left">
                                 Only 1 left
                             </div>
                             <div class="product-exchange-offer">
-                                Upto <strong>₹${product.exchangeOfferPrice}</strong> off on Exchange
+                                Upto <strong>₹${product.exchangeOfferPrice.toLocaleString()}</strong> off on Exchange
                             </div>
                         </div>
                     </div>`
@@ -133,18 +133,18 @@ checkbox.forEach((check) => {
                         </div>
                         <div class="product-price-section">
                             <div class="product-price">
-                                <span>₹${newCard.price}</span>
+                                <span>₹${newCard.price.toLocaleString()}</span>
                                 <img src="logos/assured.png" alt="">
                             </div>
                             <div class="product-discount">
                                 <span>₹${newCard.realPrice}</span>
-                                <span>${newCard.discountPercentage}% off</span>
+                                <span>${newCard.discountPercentage.toLocaleString()}% off</span>
                             </div>
                             <div class="products-left">
                                 Only 1 left
                             </div>
                             <div class="product-exchange-offer">
-                                Upto <strong>₹${newCard.exchangeOfferPrice}</strong> off on Exchange
+                                Upto <strong>₹${newCard.exchangeOfferPrice.toLocaleString()}</strong> off on Exchange
                             </div>
                         </div>
                     </div>`

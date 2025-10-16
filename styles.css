@@ -539,16 +539,13 @@ body{
     font-weight: 400;
     font-family: var(--regular);
     color: #000000;
-    list-style: none;
 }
 .product-features ul li{
     position: relative;
 }
-.product-features ul li::before{
-    content: "•";
+.product-features ul li::marker{
     color: rgb(194, 194, 194);
-    position: absolute;
-    left: -13px;
+    font-size: 10px;
 }
 
 .product-price-section{
