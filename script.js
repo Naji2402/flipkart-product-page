@@ -44,18 +44,18 @@ productCart.forEach((product) => {
                         </div>
                         <div class="product-price-section">
                             <div class="product-price">
-                                <span>₹${product.price.toLocaleString()}</span>
+                                <span>₹${product.price.toLocaleString('en-IN')}</span>
                                 <img src="logos/assured.png" alt="">
                             </div>
                             <div class="product-discount">
-                                <span>₹${product.realPrice.toLocaleString()}</span>
+                                <span>₹${product.realPrice.toLocaleString('en-IN')}</span>
                                 <span>${product.discountPercentage}% off</span>
                             </div>
                             <div class="products-left">
                                 Only 1 left
                             </div>
                             <div class="product-exchange-offer">
-                                Upto <strong>₹${product.exchangeOfferPrice.toLocaleString()}</strong> off on Exchange
+                                Upto <strong>₹${product.exchangeOfferPrice.toLocaleString('en-IN')}</strong> off on Exchange
                             </div>
                         </div>
                     </div>`
@@ -77,33 +77,103 @@ brandSection.forEach((section) => {
 
 let checkbox = document.querySelectorAll('.brand-check');
 
-checkbox.forEach((check) => {
-    check.addEventListener('change', () => {
-        if (check.checked) {
-            checkbox.forEach((otherBox) => {
-                if (otherBox != check) {
-                    otherBox.checked = false;
-                }
-            });
-        }
-    });
-    check.addEventListener('click', () => {
-    let filterdArray = productCart.filter((card) => {
-        if (check.checked && check.value === card.brandName) {
-            productSection.innerHTML = '';
-            return card;
-        }
-    })
-    filterdArray.forEach((newCard) => {
+// checkbox.forEach((check) => {
+//     check.addEventListener('change', () => {
+//         if (check.checked) {
+//             checkbox.forEach((otherBox) => {
+//                 if (otherBox != check) {
+//                     otherBox.checked = false;
+//                 }
+//             });
+//         }
+//     });
+//     check.addEventListener('click', () => {
+//     let filterdArray = productCart.filter((card) => {
+//         if (check.checked && check.value === card.brandName) {
+//             productSection.innerHTML = '';
+//             return card;
+//         }
+//     })
+//     filterdArray.forEach((newCard) => {
 
-        const getFilteredFeatures = newCard.features.map((featu) => {
+//         const getFilteredFeatures = newCard.features.map((featu) => {
+//             return `<li>${featu}</li>`;
+//         }).join('');
+//         productSection.innerHTML += `<div class="product">
+//                         <div class="product-details-section">
+//                             <div class="product-image">
+//                                 <div class="product-main-img">
+//                                     <img src="${newCard.image}" alt="">
+//                                     <svg xmlns="http://www.w3.org/2000/svg" class="N1bADF" width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#C2C2C2" class="x1UMqG" stroke="#FFFFFF" fill-rule="evenodd" opacity=".9"></path></svg>
+//                                 </div>
+//                                 <div class="add-to-compare-main">
+//                                     <input type="checkbox" id="addToCompare" class="add-to-compater">
+//                                     <label for="addToCompare">Add to compare</label>
+//                                 </div>
+//                             </div>
+//                             <div class="product-details">
+//                                 <div class="product-name">
+//                                     ${newCard.name}
+//                                 </div>
+//                                 <div class="product-ratings-reviews">
+//                                     <div class="product-rating">
+//                                         <span>${newCard.finalRating}</span>
+//                                         <img src="logos/star.svg" alt="">
+//                                     </div>
+//                                     <div class="product-review">
+//                                         <span>${newCard.ratings} Ratings & ${newCard.reviews} Reviews</span>
+//                                     </div>
+//                                 </div>
+//                                 <div class="product-features">
+//                                     <ul>
+//                                             ${getFilteredFeatures}
+//                                     </ul>
+//                                 </div>
+//                             </div>
+//                         </div>
+//                         <div class="product-price-section">
+//                             <div class="product-price">
+//                                 <span>₹${newCard.price.toLocaleString('en-IN')}</span>
+//                                 <img src="logos/assured.png" alt="">
+//                             </div>
+//                             <div class="product-discount">
+//                                 <span>₹${newCard.realPrice}</span>
+//                                 <span>${newCard.discountPercentage.toLocaleString('en-IN')}% off</span>
+//                             </div>
+//                             <div class="products-left">
+//                                 Only 1 left
+//                             </div>
+//                             <div class="product-exchange-offer">
+//                                 Upto <strong>₹${newCard.exchangeOfferPrice.toLocaleString('en-IN')}</strong> off on Exchange
+//                             </div>
+//                         </div>
+//                     </div>`
+//     }); 
+// });
+// });
+
+let allNew = [];
+ checkbox.forEach((box) => {
+    box.addEventListener('click', () => {
+        if (box.checked) {
+            productSection.innerHTML = " ";
+            let newArr = productCart.filter((product) => {
+                if (product.brandName === box.value) {
+                    return product;
+                }
+        })
+        
+        allNew.unshift(newArr)
+        allNew.forEach((newArrr) => {
+            newArrr.forEach((ar) => {
+                const getFilteredFeatures = ar.features.map((featu) => {
             return `<li>${featu}</li>`;
         }).join('');
         productSection.innerHTML += `<div class="product">
                         <div class="product-details-section">
                             <div class="product-image">
                                 <div class="product-main-img">
-                                    <img src="${newCard.image}" alt="">
+                                    <img src="${ar.image}" alt="">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="N1bADF" width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#C2C2C2" class="x1UMqG" stroke="#FFFFFF" fill-rule="evenodd" opacity=".9"></path></svg>
                                 </div>
                                 <div class="add-to-compare-main">
@@ -113,15 +183,15 @@ checkbox.forEach((check) => {
                             </div>
                             <div class="product-details">
                                 <div class="product-name">
-                                    ${newCard.name}
+                                    ${ar.name}
                                 </div>
                                 <div class="product-ratings-reviews">
                                     <div class="product-rating">
-                                        <span>${newCard.finalRating}</span>
+                                        <span>${ar.finalRating}</span>
                                         <img src="logos/star.svg" alt="">
                                     </div>
                                     <div class="product-review">
-                                        <span>${newCard.ratings} Ratings & ${newCard.reviews} Reviews</span>
+                                        <span>${ar.ratings} Ratings & ${ar.reviews} Reviews</span>
                                     </div>
                                 </div>
                                 <div class="product-features">
@@ -133,23 +203,27 @@ checkbox.forEach((check) => {
                         </div>
                         <div class="product-price-section">
                             <div class="product-price">
-                                <span>₹${newCard.price.toLocaleString()}</span>
+                                <span>₹${ar.price.toLocaleString('en-IN')}</span>
                                 <img src="logos/assured.png" alt="">
                             </div>
                             <div class="product-discount">
-                                <span>₹${newCard.realPrice}</span>
-                                <span>${newCard.discountPercentage.toLocaleString()}% off</span>
+                                <span>₹${ar.realPrice}</span>
+                                <span>${ar.discountPercentage.toLocaleString('en-IN')}% off</span>
                             </div>
                             <div class="products-left">
                                 Only 1 left
                             </div>
                             <div class="product-exchange-offer">
-                                Upto <strong>₹${newCard.exchangeOfferPrice.toLocaleString()}</strong> off on Exchange
+                                Upto <strong>₹${ar.exchangeOfferPrice.toLocaleString('en-IN')}</strong> off on Exchange
                             </div>
                         </div>
                     </div>`
-    }); 
+            });
+            
+        });
+        
+    }    
+    });
+    
 });
-});
-
 
